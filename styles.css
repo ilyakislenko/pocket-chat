@@ -82,7 +82,8 @@ body {
   max-height: calc(100% - 60px);
   overflow-y: auto;
   position: relative;
-  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.5s;
+  will-change: width;
 }
 
 .chat-list {
@@ -682,24 +683,13 @@ body {
 
 /* Добавляем прокрутку для всего popup, если не помещается */
 html, body, .container {
-  overflow: auto !important;
+  overflow: auto;
 }
 
 .sidebar-hidden {
-  display: none !important;
+  display: none;
 }
 
-.sidebar-collapsed button {
-  font-size: 12px;
-  padding: 0;
-  min-width: 0;
-  min-height: 80px;
-  background: #e9ecef;
-  border: none;
-  border-radius: 6px;
-  color: #333;
-  cursor: pointer;
-}
 
 .sidebar-toggle-btn {
   width: 100%;
@@ -725,24 +715,23 @@ html, body, .container {
 }
 /* Скрытие sidebar, оставляя только кнопку */
 .sidebar-collapsed {
-  width: 40px !important;
-  min-width: 40px !important;
-  max-width: 40px !important;
-  overflow: visible !important;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  overflow: visible;
   position: relative;
-  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 .sidebar .chat-list,
 .sidebar .sidebar-footer {
-  opacity: 1;
   pointer-events: auto;
-  transition: cubic-bezier(0.4,0,0.2,1);
+  transform: translateX(0);
+  transition: 0.5s;
 }
 .sidebar-collapsed .chat-list,
 .sidebar-collapsed .sidebar-footer {
-  opacity: 0;
   pointer-events: none;
-  transition: cubic-bezier(0.4,0,0.2,1);
+  transform: translateX(-200px);
+  transition: 0.5s
 }
 
 .delete-chat-btn {
