@@ -1,14 +1,5 @@
-// DeepSeek Chat Extension - Main JavaScript
 
-// Подключаем Tesseract.js через CDN
-// Удалён блок с document.head.appendChild(tesseractScript) для tesseract.js
-
-// Указываем локальные пути для Tesseract.js worker и языковых файлов
-// Отключаем использование воркера для Tesseract.js (single-threaded mode)
-window.Tesseract = window.Tesseract || {};
-// workerPath и langPath не нужны
-
-class DeepSeekChat {
+class PocketChat {
   constructor() {
     this.currentChatId = null;
     this.chats = [];
@@ -627,7 +618,7 @@ class DeepSeekChat {
 
 // Initialize the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  new DeepSeekChat();
+  new PocketChat();
   const chatSidebar = document.getElementById('chatSidebar');
   const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
   const sidebarToggleIcon = document.getElementById('sidebarToggleIcon');

@@ -1,9 +1,8 @@
-// DeepSeek Chat Extension - Background Script
 
 // Handle extension installation
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason === 'install') {
-    console.log('DeepSeek Chat Extension installed');
+    console.log('PocketChat installed');
     
     // Initialize default settings
     chrome.storage.sync.set({

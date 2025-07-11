@@ -1,4 +1,3 @@
-// DeepSeek Chat Extension - Content Script
 
 // Listen for messages from background script
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
