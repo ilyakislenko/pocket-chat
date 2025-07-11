@@ -526,6 +526,9 @@ class PocketChat {
         }
       }
     });
+    document.getElementById('reloadBtn').onclick = () => {
+      location.reload();
+    };
   }
 
   sendMessageFromInput() {
